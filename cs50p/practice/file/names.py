@@ -1,9 +1,7 @@
 names = []
-
-for _ in range(3):
-    name = input("Name: ")
-    names.append(name)
     
-print(names)    
-for name in names:
-    print(name)
+with open("names.txt", "r") as file:
+    lines = file.readlines()
+    
+for line in lines:
+    print(f'Hello {line.strip()}!')
